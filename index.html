@@ -1,72 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Anti Slip Floor Safety</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Anti Slip Floor Safety</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body class="home">
-    <header class="site-header">
-        <div class="header-container">
-            <a href="index.html">
-             <img src="logo.png" alt="Anti Slip Floor Safety Logo" class="logo">
-            </a>
+  <header class="site-header">
+    <div class="header-container">
+      <!-- Hamburger Icon -->
+      <div class="menu-toggle" id="mobile-menu">☰</div>
 
-            <nav class="nav-menu">
-                <div class="menu-toggle" id="mobile-menu">
-                    ☰
-                </div>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+      <!-- Logo -->
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="Anti Slip Floor Safety Logo" class="logo" id="logo" />
+      </a>
 
-    <div class="main" id="hero">
-        <div class="hero-content">
-            <h2 class="hero-text">Prevent Slips Before They Happen</h2>
-            <p class="hero-subtext">Australia's trusted anti-slip specialists for over 20 years.</p>
-            <a href="#about" class="scroll-down">▼</a>
-        </div>
+      <!-- Navigation -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="section" id="about">
-        <h2>About Us</h2>
-        <p>We provide high-quality anti-slip floor solutions in the Brisbane area.</p>
+  <div class="main" id="hero">
+    <div class="hero-content">
+      <h2 class="hero-text">Prevent Slips Before They Happen</h2>
+      <p class="hero-subtext">Australia's trusted anti-slip specialists for over 20 years.</p>
+      <a href="#about" class="scroll-down">▼</a>
     </div>
+  </div>
 
-    <!-- Java Script -->
-    <script>
-        window.addEventListener('scroll', function(){
-            let header = document.querySelector('.site-header');
-            if (window.scrollY > 50){
-                header.classList.add('scrolled');
-            } else{
-                header.classList.remove('scrolled')
-            }
+  <div class="section" id="about">
+    <h2>About Us</h2>
+    <p>We provide high-quality anti-slip floor solutions in the Brisbane area.</p>
+  </div>
+
+  <!-- Java Scripts -->
+  <script>
+    // Scroll effect
+    window.addEventListener("scroll", function () {
+        let header = document.querySelector(".site-header");
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+
+    // Hamburger menu functionality
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navMenu = document.getElementById("nav-menu");
+    const logo = document.getElementById("logo");
+
+    mobileMenu.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+        logo.classList.toggle("centered");
+    });
+
+    // lose menu when nav link is clicked
+    navMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("active");
+            logo.classList.remove("centered");
         });
-    </script>
+    });
+</script>
 
-    <script>
-        const mobileMenu = document.getElementById("mobile-menu");
-        const navMenu = document.getElementById(".nav-menu");
 
-        mobileMenu.addEventListener("click", function(){
-            navMenu.classList.toggle("active");
-        });
-    </script>
-
-</body>
-
-<footer class="site-footer">
+  <footer class="site-footer">
     <div class="footer-content">
-        <p>&copy; ANIT SLIP</p>
-        <p>
-            <a href="disclaimer.html">Disclaimer</a> | 
-            <a href="privacy.html">Privacy Policy</a>
-        </p>
+      <p>&copy; ANTI SLIP</p>
+      <p>
+        <a href="disclaimer.html">Disclaimer</a> |
+        <a href="privacy.html">Privacy Policy</a>
+      </p>
     </div>
-</footer>
+  </footer>
+</body>
 </html>

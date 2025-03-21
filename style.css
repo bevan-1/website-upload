@@ -82,67 +82,6 @@ html{
 .scrolled .nav-menu ul li a {
     color: red;
 }
-
-/* #endregion */
-
-/* #region Hamburger Menu */
-.menu-toggle{
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: red;
-    padding: 10px;
-}
-
-.nav-menu ul{
-    display: flex;
-}
-
-@media screen and (max-width: 1024px){
-    /* Adjust logo size */
-    .logo{
-        height: 40px;
-    }
-
-    /* show hamburger icon */
-    .menu-toggle{
-        display: block;
-    }
-
-    /* hide default nav menu */
-    .nav-menu ul{
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-menu.active ul{
-        display: flex;
-    }
-
-    .nav-menu ul li{
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .nav-menu ul li a{
-        color: white;
-        font-size: 18px;
-        display: block;
-        padding: 10px;
-    }
-
-    .nav-menu ul li a:hover{
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-}
-
 /* #endregion */
 
 /* #region Hero Page */
@@ -349,3 +288,95 @@ body.disclaimer .main ul li{
     margin-bottom: 10px;
 }
 /* #endregion */
+
+/* #region Mobile Adjustments */
+/* Make logo center when menu is active on portrait phones */
+.logo.centered {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    z-index: 1002;
+}
+
+/* Make both logo and menu-toggle sticky */
+.menu-toggle,
+.logo {
+    position: sticky;
+    top: 10px;
+    z-index: 1001;
+}
+
+/* Target only phones in portrait mode */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: static;
+        transform: none;
+    }
+
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-menu.active ul {
+        display: flex;
+    }
+
+    .nav-menu ul li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-menu ul li a {
+        color: white;
+        font-size: 18px;
+        display: block;
+        padding: 10px;
+    }
+
+    .nav-menu ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .logo.centered {
+        top: 10px;
+    }
+}
+
+/* Show default nav layout for anything bigger or landscape mode */
+@media screen and (min-width: 769px), (orientation: landscape) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-menu ul {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+    }
+
+    .logo {
+        position: static;
+        transform: none;
+    }
+}
+  /* #endregion */
+  
