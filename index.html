@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anti Slip Floor Safety</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html">
+             <img src="logo.png" alt="Anti Slip Floor Safety Logo" class="logo">
+            </a>
+
+            <nav class="nav-menu">
+                <div class="menu-toggle" id="mobile-menu">
+                    ☰
+                </div>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main" id="hero">
+        <div class="hero-content">
+            <h2 class="hero-text">Prevent Slips Before They Happen</h2>
+            <p class="hero-subtext">Australia's trusted anti-slip specialists for over 20 years.</p>
+            <a href="#about" class="scroll-down">▼</a>
+        </div>
+    </div>
+
+    <div class="section" id="about">
+        <h2>About Us</h2>
+        <p>We provide high-quality anti-slip floor solutions in the Brisbane area.</p>
+    </div>
+
+    <!-- Java Script -->
+    <script>
+        window.addEventListener('scroll', function(){
+            let header = document.querySelector('.site-header');
+            if (window.scrollY > 50){
+                header.classList.add('scrolled');
+            } else{
+                header.classList.remove('scrolled')
+            }
+        });
+    </script>
+
+    <script>
+        const mobileMenu = document.getElementById("mobile-menu");
+        const navMenu = document.getElementById(".nav-menu");
+
+        mobileMenu.addEventListener("click", function(){
+            navMenu.classList.toggle("active");
+        });
+    </script>
+
+</body>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; ANIT SLIP</p>
+        <p>
+            <a href="disclaimer.html">Disclaimer</a> | 
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    </div>
+</footer>
+</html>
