@@ -60,13 +60,10 @@ html{
     gap: 20px;
     margin: 0;
     padding: 0;
+    display: inline-block;
 }
 
-.nav-menu ul li{
-    display: inline-block
-}
-
-.nav-menu ul li a{
+.nav-menu ul a{
     text-decoration: none;
     color: red;
     font-size: 18px;
@@ -75,7 +72,7 @@ html{
     transition: color 0.3s ease-in-out;
 }
 
-.nav-menu ul li a:hover{
+.nav-menu ul a:hover{
     color: #ff7200;
 }
 
@@ -319,19 +316,24 @@ body.disclaimer .main ul li{
     }
 
     .nav-menu ul {
-        display: none;
+        display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.95);
-        text-align: center;
-        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        max-width: 300px;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 2rem 1rem;
+        text-align: left;
+        transition: left 0.3 ease-in-out;
+        z-index: 1000;
+        backdrop-filter: blur(6x);
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
     }
 
     .nav-menu.active ul {
-        display: flex;
+        left: 0;
     }
 
     .nav-menu ul li {
