@@ -21,7 +21,9 @@
             <ul>
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
                 <a href="#contact">Contact</a>
+                <a href="#faq">FAQ</a>
             </ul>
         </nav>
 
@@ -46,9 +48,9 @@
                 <input type="text" name="subject" placeholder="Subject*" required>
                   <input type="text" name="name" placeholder="Name*" required>
                   <input type="tel" name="phone" placeholder="Phone Number*" required>
-                  <input type="text" name="companyname" placeholder="Company Name*">
-                  <input type="email" name="email" placeholder="Email Address:" required>
-                  <textarea name="message" placeholder="What can we help you with?" required></textarea>
+                  <input type="text" name="companyname" placeholder="Company Name">
+                  <input type="email" name="email" placeholder="Email Address*" required>
+                  <textarea name="message" placeholder="What can we help you with?*" required></textarea>
                   <button type="submit">Submit</button>
                 </div>
               
@@ -65,21 +67,66 @@
     <div class="main" id="hero">
         <div class="hero-content">
             <h2 class="hero-text">Prevent Slips Before They Happen</h2>
-        <p class="hero-subtext">Australia's trusted anti-slip specialists for over 20 years.</p>
-        <a href="#about" class="scroll-down">▼</a>
+        <p class="hero-subtext">Our Anti Slip safety treatment will dramatically improve slip resistance of floor surfaces in wet conditions... when most accidents happen! Why risk a fall when you can easily and economically eliminate the problem..</p>
+        <a href="#services" class="scroll-down">See our Services</a>
         </div>
     </div>
 
     <!-- about section -->
     <div class="section" id="about">
-        <h2>About Us</h2>
+        <h2 class="about-heading">About Us</h2>
         <p>We provide high-quality anti-slip floor solutions in the Brisbane area.</p>
     </div>
 
     <!-- services section -->
     <div class="section" id="services">
-        <h2>Services</h2>
+        <h2 class="services-heading">Services</h2>
         <p>list of services:</p>
+    </div>
+
+    <!-- testimonials section -->
+    <div class="section" id="testimonials">
+        <h2 class="testimonial-heading">What Our Clients Say</h2>
+        <!-- featured quote -->
+        <div class="testimonial-featured">
+        <strong>John Tofte, Centre Manager, Brassall Shopping Centre Qld - 8th June, 2014</strong>
+        <p>“Your company put the Anti Slip treatment onto all of our amenities/wc areas on 22/8/2012 which gave us a great result. Following our conversation on 9th April, 2014 I arranged for a fresh scrub in depth by our cleaning contractor. We found your Anti Slip treatment was still totally effective and it seems like we have another couple of years before requiring a booster treatment. Thank you for your advice and for providing a quality product.”</p>
+        </div>
+
+        <!-- testimonial carousel -->
+        <div class="testimonial-carousel" id="testimonial-carousel">
+            <div class="testimonial-track two rows">
+                <!-- row 1 -->
+                <div class="testimonial-row">
+                    <div class="testimonial"><strong>Dave Hordern, Body Corporate Secretary</strong><p>“The result is excellent. Happy to recommend your work.”</p></div>
+                    <div class="testimonial"><strong>Apartments, Cairns (reception area)</strong><p>“We put our Anti Slip treated area to the test during a heavy downpour, tiles remain very clean and absolutely non slip”</p></div>
+                    <div class="testimonial"><strong>Brisbane City Hotel</strong><p>“Anti Slip has helped make our bathroom floors safer for our clients”</p></div>
+                    <div class="testimonial"><strong>Brisbane Property Manager (entry area)</strong><p>“Thanks for a great job, it made a huge difference”</p></div>
+                    
+                    <!-- duplicate testimonials for a smooth loop -->
+                    <div class="testimonial"><strong>Dave Hordern, Body Corporate Secretary</strong><p>“The result is excellent. Happy to recommend your work.”</p></div>
+                    <div class="testimonial"><strong>Apartments, Cairns (reception area)</strong><p>“We put our Anti Slip treated area to the test during a heavy downpour, tiles remain very clean and absolutely non slip”</p></div>
+                    <div class="testimonial"><strong>Brisbane City Hotel</strong><p>“Anti Slip has helped make our bathroom floors safer for our clients”</p></div>
+                    <div class="testimonial"><strong>Brisbane Property Manager (entry area)</strong><p>“Thanks for a great job, it made a huge difference”</p></div>
+                </div>
+
+                <!-- row 2 -->
+                <div class="testimonial-row">
+                    <div class="testimonial"><strong>Runaway Beach Resort (indoor pool area)</strong><p>“Your treatment is doing the job that you said it would”</p></div>
+                    <div class="testimonial"><strong>Palm Beach Resort (steps & landings)</strong><p>“Quick, no fuss service”</p></div>
+                    <div class="testimonial"><strong>Burleigh Heads High-rise Apartments (balconies)</strong><p>“We are very pleased with the performance”</p></div>
+                    <div class="testimonial"><strong>Gold Coast Nursing Home (bathrooms & kitchen)</strong><p>“Prompt service, high quality of work”</p></div>
+
+                    <!-- duplicate testimonials for a smooth loop -->
+                    <div class="testimonial"><strong>Runaway Beach Resort (indoor pool area)</strong><p>“Your treatment is doing the job that you said it would”</p></div>
+                    <div class="testimonial"><strong>Palm Beach Resort (steps & landings)</strong><p>“Quick, no fuss service”</p></div>
+                    <div class="testimonial"><strong>Burleigh Heads High-rise Apartments (balconies)</strong><p>“We are very pleased with the performance”</p></div>
+                    <div class="testimonial"><strong>Gold Coast Nursing Home (bathrooms & kitchen)</strong><p>“Prompt service, high quality of work”</p></div>
+                </div>
+            </div>
+        </div>
+        
+        <p>For more information or a quotation and obligation free demonstration click "Get a Quote" or call us now on 0410 002 241</p>
     </div>
 
     <!-- contact section -->
@@ -94,6 +141,28 @@
         <p>Frequently Asked Questions</p>
     </div>
 
+    <!-- Last Page section -->
+    <div class="section" id="last-page">
+        <div class="last-page-columns">
+            <div class="last-page-col">
+                <h2><a href="index.html">Anti Slip Floor Safety PTY LTD</a></h2>
+                <p><strong>ABN: </strong><span class="highlight">99 118 481 324</span></p>
+                <p>6 Firefly Crescent, Lawnton QLD 4501</p>
+                <p><strong>Phone Number: </strong><a href="tel:0410002241" class="highlight">0410 002 241</a></p>
+                <p><strong>Email: </strong><a href="mailto:info@antislip.com.au" class="highlight">info@antislip.com.au</a></p>
+            </div>
+
+            <div class="last-page-col">
+                <h2>Quick Links</h2>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="#about">About</a></p>
+                <p><a href="#services">Services</a></p>
+                <p><a href="#testimonials">Testimonials</a></p>
+                <p><a href="#contact">Contact Us</a></p>
+                <p><a href="#faq">FAQ</a></p>
+            </div>
+        </div>
+    </div>
 
 
   <!-- Java Scripts -->
@@ -168,14 +237,18 @@
 
 </script>
 
-  <footer class="site-footer">
-    <div class="footer-content">
-      <p>&copy; ANTI SLIP</p>
-      <p>
-        <a href="disclaimer.html">Disclaimer</a> |
-        <a href="privacy.html">Privacy Policy</a>
-      </p>
-    </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>&copy; 2025 Anti Slip. All Rights Reserved.</p>
+                <p>
+                    <a href="disclaimer.html">Disclaimer</a> |
+                    <a href="privacy.html">Privacy Policy</a>
+                </p>
+            </div>
+            <img src="australian made symbol.png" alt="Australian Made and Owned" class="australian-made-logo">
+            <img src="preferred supplier logo.png" alt="ARAMA Preferred Supplier" class="preferred-supplier-logo">
+        </div>
   </footer>
 </body>
-</html>
+</html> 

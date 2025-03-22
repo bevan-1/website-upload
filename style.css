@@ -4,7 +4,7 @@ html{
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Roboto;
     box-sizing: border-box;
 }
 
@@ -114,9 +114,9 @@ body.home .main{
 .scroll-down {
     display: inline-block;
     font-size: 32px;
-    color: white;
+    color: red;
     text-decoration: none;
-    animation: bounce 2s infinite;
+    animation: bounce 3s infinite;
     margin-top: 20px;
 }
 
@@ -146,7 +146,7 @@ body.home .main{
 
 /* #endregion */
 
-/* #region Below Hero Page */
+/* #region Sections */
 .section{
     padding: 100px 20px;
     background-color: #f9f9f9;
@@ -156,6 +156,7 @@ body.home .main{
 .section h2{
     font-size: 36px;
     margin-bottom: 20px;
+    color: red;
 }
 
 .section p{
@@ -180,37 +181,6 @@ body.home .main{
 }
 
 /* #endregion*/
-
-/* #region Footer */
-.site-footer{
-    background-color: #222;
-    color: #eee;
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 100px;
-}
-
-.site-footer a{
-    color: #ccc;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.site-footer a:hover{
-    color: white;
-}
-
-.footer.content p{
-    margin: 10px 0;
-    font-size: 14px;
-}
-
-@media screen and (max-width: 1024px){
-    .site-footer{
-        padding: 20px;
-    }
-}
-/* #endregion */
 
 /* #region Privacy Page */
 body.privacy .main{
@@ -387,7 +357,7 @@ body.disclaimer .main ul li{
 
 /* #region Quote Button */
 .quote-button{
-    background-color: #ff7200;
+    background-color: red;
     color: white;
     text-decoration: none;
     padding: 10px 20px;
@@ -443,7 +413,7 @@ body.disclaimer .main ul li{
 }
 
 .quote-popup-content button{
-    background-color: #ff7200;
+    background-color: red;
     color: white;
     border: none;
     padding: 12px;
@@ -467,5 +437,194 @@ body.disclaimer .main ul li{
 
 input[required]::placeholder, textarea[required]::placeholder {
   color: #c00;
+}
+/* #endregion */
+
+/* #region Testimonials */
+/* Testimonials Carousel */
+.testimonials{
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonial-heading{
+    color: red;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
+
+.testimonial-featured{
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.testimonial-featured strong{
+    display: block;
+    font-size: 1.1em;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.testimonial-carousel{
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    position: relative;
+}
+
+.testimonial-track.two-rows{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.testimonial-row{
+    display: flex;
+    width: max-content;
+    animation: scrollTestimonials 25s linear infinite;
+}
+
+.testimonial{
+    background: rgba(255, 255, 255, 0.05);
+    border-color: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 15px;
+    min-width: 300px;
+    max-width: 300px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.testimonial strong{
+    color: red;
+    display: block;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.testimonial-cta{
+    margin-top: 30px;
+    font-size: 1em;
+    color: #fff;
+}
+
+@keyframes scrollTestimonials{
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media screen and (max-width: 768px){
+    .testimonial-track{
+        animation-duration: 60s;
+    }
+    .testimonial{
+        min-width: 250px;
+        max-width: 250px;
+    }
+}
+
+.testimonial-row:nth-child(2){
+    margin-left: 175px;
+}
+
+/* #endregion */
+
+/* #region Last Page */
+#last-page{
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+.last-page-columns{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 0px
+}
+
+.last-page-col{
+    flex: 1 1 45%;
+    min-width: 250px;
+}
+
+.last-page-col h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.last-page-col p{
+    margin: 8px 0;
+    color: #eee;
+    font-size: 16px;
+}
+
+.last-page-col a{
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.last-page-col a:hover{
+    text-decoration: underline;
+}
+
+/* #endregion */
+
+/* #region Footer */
+.site-footer{
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 0px;
+}
+
+.site-footer a{
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.site-footer a:hover{
+    color: white;
+}
+
+.footer.content p{
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.australian-made-logo{
+    position: absolute;
+    margin: -45px 0;
+    right: 40px;
+    max-width: 120px;
+    max-height: 60px;
+    height: auto;
+}
+
+.preferred-supplier-logo{
+    position: absolute;
+    margin: -48px 0;
+    right: 120px;
+    max-width: 140px;
+    max-height: 70px;
+    height: auto;
+}
+
+@media screen and (max-width: 1024px){
+    .site-footer{
+        padding: 20px;
+    }
 }
 /* #endregion */
